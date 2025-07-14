@@ -10,8 +10,8 @@ import { RouterOutlet } from '@angular/router';
 export class App {
   protected title = 'migrator-destructure-failure';
 
-  //This should be migrated to inject properly, but it fails! The  ElementRef will get deleted. Imagine +700 files impacted
-  constructor({nativeElement}: ElementRef){
+  //emptied the constructor without proper migration/transformation to use v14 inject()! 
+  constructor(){
     console.log(nativeElement)
   }
 }
